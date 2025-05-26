@@ -42,23 +42,23 @@ export default function Pages(props) {
 		return activeRoute;
 	};
 	const getActiveNavbar = (routes) => {
-		let activeNavbar = false;
-		for (let i = 0; i < routes.length; i++) {
-			if (routes[i].category) {
-				let categoryActiveNavbar = getActiveNavbar(routes[i].views);
-				if (categoryActiveNavbar !== activeNavbar) {
-					return categoryActiveNavbar;
-				}
-			} else {
-				if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
-					if (routes[i].secondaryNavbar) {
-						return routes[i].secondaryNavbar;
-					}
-				}
-			}
-		}
-		return activeNavbar;
-	};
+  let activeNavbar = false;
+  for (let i = 0; i < routes.length; i++) {
+    if (routes[i].category) {
+      let categoryActiveNavbar = getActiveNavbar(routes[i].views);
+      if (categoryActiveNavbar !== activeNavbar) {
+        return categoryActiveNavbar;
+      }
+    } else {
+      if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
+        if (routes[i].secondaryNavbar) {
+          return routes[i].secondaryNavbar;
+        }
+      }
+    }
+  }
+  return activeNavbar;
+};
 	const getRoutes = (routes) => {
 		return routes.map((prop, key) => {
 			if (prop.collapse) {
