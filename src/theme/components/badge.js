@@ -9,9 +9,9 @@ export const badgeStyles = {
                     height: "25px"
                 }
             },
-            baseStyle: {
-                textTransform: "capitalize"
-            }
+         //   baseStyle: {
+         //       textTransform: "capitalize"
+         //   }
 
         }
     }
