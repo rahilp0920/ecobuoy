@@ -76,5 +76,10 @@
 			"not dead",
 			"not OperaMini all"
 		]
+	},
+	"eslintConfig": {
+		"rules": {
+			"no-unused-vars": "warn"
+		}
 	}
 }
