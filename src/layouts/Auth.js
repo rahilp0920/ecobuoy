@@ -41,7 +41,7 @@ export default function Pages(props) {
 		}
 		return activeRoute;
 	};
-/*	const getActiveNavbar = (routes) => {
+	const getActiveNavbar = (routes) => {
 		let activeNavbar = false;
 		for (let i = 0; i < routes.length; i++) {
 			if (routes[i].category) {
@@ -58,7 +58,7 @@ export default function Pages(props) {
 			}
 		}
 		return activeNavbar;
-	}; */
+	}; 
 	const getRoutes = (routes) => {
 		return routes.map((prop, key) => {
 			if (prop.collapse) {
